@@ -61,11 +61,11 @@
 #   different patterns - this pattern could be simplified as two
 #   regexes:
 #
-#     s/ ^ 0+ ( \d* \. \d+ ) $ /$1/rsxx
+#     s/ ^ 0+ ( \d* \. \d+ ) $ /$1/arsxx
 #     
 #       - and -
 #
-#     s/ ^ 0+ ( [1-9] \d* ) $ /$1/rsxx
+#     s/ ^ 0+ ( [1-9] \d* ) $ /$1/arsxx
 #
 #   The first one handles numbers with a decimal point.  It removes all
 #   leading zeros in front of the decimal point, in a pretty
@@ -82,5 +82,5 @@
 #   These two regexes were then combined form what is in the one-liner
 #   below.
 #   
-perl -E 'say shift =~ s/ ^ 0+ ( ( [0-9]* \. [0-9]+ ) | ( [1-9] [0-9]* ) ) $ /$1/arsxx' -- "$*"
+perl -E 'say shift =~ s/ ^ 0+ ( ( \d* \. \d+ ) | ( [1-9] \d* ) ) $ /$1/arsxx' -- "$*"
 
