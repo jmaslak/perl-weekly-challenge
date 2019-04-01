@@ -18,4 +18,4 @@ my (@matches) = $orig =~ m/e/g;
 my $new       = $orig =~ s/e/E/gr;
 
 say $new;
-say "Number off 'e' characters: " . scalar(@matches);
+say "Number of 'e' characters: " . scalar(@matches);
