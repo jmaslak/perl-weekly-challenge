@@ -1,5 +1,5 @@
 #!/usr/bin/env perl6
-use v6.d;
+use v6;
 
 # Challenge:
 #   Write a script that can convert integers to and from a base35
